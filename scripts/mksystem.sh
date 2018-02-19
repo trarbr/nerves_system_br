@@ -71,6 +71,9 @@ cp $BR2_EXTERNAL_NERVES_PATH/nerves-env.sh $WORK_DIR/$ARCHIVE_NAME
 cp $BR2_EXTERNAL_NERVES_PATH/nerves.mk $WORK_DIR/$ARCHIVE_NAME
 cp -R $BR2_EXTERNAL_NERVES_PATH/scripts $WORK_DIR/$ARCHIVE_NAME
 
+# Try to copy over the build artifact checksum
+cp $BR2_EXTERNAL_NERVES_PATH/CHECKSUM $WORK_DIR/$ARCHIVE_NAME 2>/dev/null
+
 # Copy the built configuration over
 cp $BASE_DIR/.config $WORK_DIR/$ARCHIVE_NAME
 
